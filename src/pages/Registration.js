@@ -1,11 +1,12 @@
 import React from 'react';
+import RegistrationComponent from "../components/Registration/RegistrationComponent";
 
-const Authorization = () => {
+const Registration = () => {
     return (
-        <div>
-            
+        <div className= "LoginReg">
+            <RegistrationComponent/>
         </div>
     );
 };
 
-export default Authorization;
+export default Registration;

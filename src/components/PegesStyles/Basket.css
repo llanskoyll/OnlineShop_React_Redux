@@ -1,0 +1,73 @@
+.BasketItem {
+    display: flex;
+    justify-content: space-between;
+}
+.basketItem__info span {
+    margin-right: 20px;
+}
+.btn-buy {
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 2px 5px 2px 5px;
+    transition: all .3s linear;
+}
+.btn-buy:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.warning__basket{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.7s;
+}
+
+.warning__basket.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.warning__basket__content {
+    padding: 20px;
+    border-radius: 12px;
+    width: 25vw;
+    background-color: #fff;
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+.warning__basket__content.active {
+    transform: scale(1);
+}
+.warning__buttons button {
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 2px 5px 2px 5px;
+    transition: all .3s linear;
+    margin-right: 5px;
+}
+.btn__link {
+    margin-left: 5px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    transition: border-bottom-color .3s linear;
+
+}
+.btn__link:hover {
+    border-bottom: 1px solid #000;
+    color: #000;
+}

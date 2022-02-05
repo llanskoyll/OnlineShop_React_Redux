@@ -1,0 +1,58 @@
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-btn button {
+    border: 1px solid #fff;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    transition: all .2s linear;
+}
+.nav-btn button:hover {
+    background-color: #fff;
+    color: #000;
+}
+.nav-nameUser {
+    color: #fff;
+    margin-right: 10px;
+}
+.basketNavCount {
+    position: relative;
+}
+.basketNavCountChild {
+    opacity: 0;
+}
+.basketNavCountChild.active{
+    font-size: 14px;
+    padding: 5px;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    margin-left: -50%;
+    transform: translate(90%,-30%);
+    color: #fff;
+    position: absolute;
+}
+.nav__link {
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px;
+    transition: all .3s linear;
+}
+.nav__link:hover {
+    color: #fff
+}
+.nav__link:hover:after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    bottom: 0;
+}

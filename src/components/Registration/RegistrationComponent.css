@@ -1,0 +1,17 @@
+.LoginReg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.FormLogin{
+    max-width: 300px;
+}
+.btn {
+    display: flex;
+    align-items: center;
+}
+.btn Button {
+    margin-right: 10px;
+}

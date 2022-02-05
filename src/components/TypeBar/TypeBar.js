@@ -1,32 +1,26 @@
 import React from 'react';
+import './TypeBar.css'
+import BrandTypeBar from "./BrandTypeBar";
+import CategoryTypeBar from "./CategoryTypeBar";
 import {useDispatch, useSelector} from "react-redux";
-import {ListGroup, ListGroupItem} from "react-bootstrap";
-import './ListBrand.css'
 
-const ListBrand = () => {
+const TypeBar = () => {
 
     const dispatch = useDispatch()
-    const brands = useSelector(state => state.catalog.brands)
-    const activeIdBrand = useSelector(state => state.catalog.activeBrandTypeBar)
+    const type = useSelector(state => state.catalog.activeType_TypeBar)
+    const brand = useSelector(state => state.catalog.activeBrand_TypeBar)
 
-    const activeBrandTypeBar = (count) => {
-        dispatch({type: 'ACTIVE_BRAND_TYPEBAR', payload: count.id})
-        dispatch({type: 'ACTIVE_TECH', payload: count})
+    const resetFilter = () => {
+        dispatch({type: 'RESET_FILTER', payload: 0})
     }
-    
+
     return (
-        <ListGroup className = "TypeBar">
-            {brands.map(count => (
-                    <ListGroupItem className = "TypeBarItem"
-                        active ={activeIdBrand === count.id}
-                        onClick = {() => activeBrandTypeBar(count)}
-                        key = {count.id}
-                    >
-                        {count.name}
-                    </ListGroupItem>
-            ))}
-        </ListGroup>
+        <>
+            <BrandTypeBar/>
+            <CategoryTypeBar/>
+            <button className = "Btn_reset" onClick = {() => resetFilter()}>Сбросить фильтр</button>
+        </>
     );
 };
 
-export default ListBrand;
+export default TypeBar;

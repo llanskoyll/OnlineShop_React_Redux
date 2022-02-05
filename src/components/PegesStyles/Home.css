@@ -1,0 +1,12 @@
+.addBasket {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 5px 2px 5px 2px;
+    transition: all .3s linear;
+}
+.addBasket:hover {
+    color: #fff;
+    background-color: #999999;
+}

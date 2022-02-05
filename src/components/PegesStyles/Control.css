@@ -1,0 +1,27 @@
+.ControlModal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ControlModal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.ControlModal__content {
+    padding: 20px;
+    border-radius: 12px;
+    width: 25vw;
+    background-color: #fff;
+}
+.ControlModal__content.active {
+    transform: scale(1);
+}

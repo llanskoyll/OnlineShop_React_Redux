@@ -1,0 +1,51 @@
+.Modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.7s;
+}
+
+.Modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.Modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    width: 25vw;
+    background-color: #fff;
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+.Modal__content.active {
+    transform: scale(1);
+}
+.Modal__btnClose button {
+    margin:10px 5px 5px 5px;
+    border: 1px solid #000;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    outline: none;
+    color: #000;
+    background: transparent;
+    transition: all .2s linear;
+}
+.Modal__btnClose button:hover {
+    background-color: #000;
+    color: #fff;
+}
+.addCash input{
+    width: 100%;
+    padding: 2px 5px 2px 5px;
+    margin: 5px 0px 5px 0px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
